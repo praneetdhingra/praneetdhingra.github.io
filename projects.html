@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Projects — Praneet Dhingra</title>
+  <meta name="description" content="Every project by Praneet Dhingra, Data & AI Consultant: insurance risk pricing models, automation, dashboards, AI agents, AI research, and two products built on the side." />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind-config.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="analytics.js" defer></script>
+</head>
+<body class="bg-paper text-ink font-sans antialiased">
+
+  <!-- ============================= NAV ============================= -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-paper/90 backdrop-blur border-b border-line">
+    <nav class="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="index.html" class="wordmark">Praneet Dhingra</a>
+      <ul class="hidden md:flex items-center gap-7 text-sm font-medium text-ink/60">
+        <li><a href="index.html#services" class="hover:text-accent transition-colors">Services</a></li>
+        <li><a href="index.html#work" class="hover:text-accent transition-colors">Case Studies</a></li>
+        <li><a href="index.html#experience" class="hover:text-accent transition-colors">Experience</a></li>
+        <li><a href="projects.html" class="text-ink">All Projects</a></li>
+        <li><a href="index.html#contact" class="hover:text-accent transition-colors">Contact</a></li>
+      </ul>
+      <div class="md:hidden flex items-center gap-5 text-sm font-semibold">
+        <a href="index.html" class="text-ink/60">Home</a>
+        <a href="index.html#contact" class="text-accent">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============================= INTRO + FILTER ============================= -->
+    <section class="max-w-5xl mx-auto px-6 pt-36 pb-10">
+      <a href="index.html" class="text-sm font-medium text-accent hover:text-accent-dark">← Back to home</a>
+      <h1 class="mt-6 font-serif font-semibold tracking-tight text-4xl sm:text-5xl text-ink">All Projects</h1>
+      <p class="mt-5 text-lg text-ink/70 max-w-2xl leading-relaxed">
+        Everything, grouped by where it was done. Filter by the kind of work you need — the
+        projects marked <span class="badge">Case study</span> have a full write-up on the home page.
+      </p>
+
+      <!-- Filter chips: each data-filter value must match a tag in the cards' data-tags -->
+      <div class="mt-10 flex flex-wrap gap-2" role="group" aria-label="Filter projects">
+        <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-filter="ml" aria-pressed="false">ML & Statistics</button>
+        <button type="button" class="chip" data-filter="genai" aria-pressed="false">GenAI & LLMs</button>
+        <button type="button" class="chip" data-filter="bi" aria-pressed="false">Dashboards & Reporting</button>
+        <button type="button" class="chip" data-filter="automation" aria-pressed="false">Automation & Data Engineering</button>
+        <button type="button" class="chip" data-filter="cv" aria-pressed="false">Computer Vision</button>
+        <button type="button" class="chip" data-filter="product" aria-pressed="false">Product & Strategy</button>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PROJECT CARDS
+         To add a project: copy an <article class="project"> block into the right group.
+         data-tags: any of  ml  genai  bi  automation  cv  product  (space-separated)
+         ========================================================================= -->
+
+    <!-- ============ Group: Insurance ============ -->
+    <section class="project-group" data-group id="insurance">
+      <div class="group-heading">
+        <h2 class="font-serif font-semibold text-2xl text-ink">Insurance Risk Pricing</h2>
+        <p class="text-sm text-ink/50">Global insurance provider · 2024 — present</p>
+      </div>
+      <div class="project-grid">
+
+        <article class="project" data-tags="ml automation">
+          <span class="badge">Case study</span>
+          <h3 class="project-title">Modelling Framework for a Risk Pricing Team</h3>
+          <p class="project-text">A modular, object-oriented Python modelling pipeline built from scratch
+            for a team that had no technical infrastructure, designed so non-technical colleagues can run
+            it. Can substitute Emblem for the team's needs. Feature engineering, outlier detection, insight
+            and reporting automation are next, currently in design.</p>
+          <p class="project-metric">2 weeks → 2–5 days per model · 20+ risk models built on it</p>
+          <a href="index.html#case-framework" class="project-link">Read the case study →</a>
+        </article>
+
+        <article class="project" data-tags="automation bi">
+          <span class="badge">Case study</span>
+          <h3 class="project-title">Rate Review Automation</h3>
+          <p class="project-text">A Python tool that produces the one-way and two-way views of written and
+            earned premium, loss ratios and fees that open every rate review. Taken over from a departing
+            colleague and rebuilt from scratch, from design and documentation to code.</p>
+          <p class="project-metric">2 days → 5 minutes · 6 reviews running, 5 more planned by end of Q2 2027</p>
+          <a href="index.html#case-rate-review" class="project-link">Read the case study →</a>
+        </article>
+
+        <article class="project" data-tags="ml">
+          <span class="badge">Case study</span>
+          <h3 class="project-title">New Product Launch: Pricing & Risk Model</h3>
+          <p class="project-text">Modelling for a new insurance product in the Middle East, where the
+            provider already operated but had no data for a comparable product. Led solo from data strategy
+            to pricing and risk recommendations. Being implemented in-market; presented at a global
+            underwriting leadership townhall.</p>
+          <a href="index.html#case-new-product" class="project-link">Read the case study →</a>
+        </article>
+
+        <article class="project" data-tags="ml">
+          <h3 class="project-title">Data-Driven Pricing Strategy</h3>
+          <p class="project-text">Currently leading a shift from models that only support rate reviews to a
+            pricing strategy that drives market positioning for new and existing business. A feature
+            selection pipeline votes across RFE, correlation analysis and GBM importance; the winners feed
+            GLM risk models; then Bayesian methods and simulated annealing find the global and local
+            highest- and lowest-risk cohorts for targeted pricing action. In progress.</p>
+        </article>
+
+        <article class="project" data-tags="ml">
+          <h3 class="project-title">Claims Frequency & Severity Models</h3>
+          <p class="project-text">Five to six frequency and severity risk models for different products, built
+            on the framework, to find loss cutters and profit drivers through statistical analysis. Ran the
+            last two solo — documentation, processing, EDA, modelling, insights, reporting and follow-up
+            questions from technical and non-technical audiences.</p>
+        </article>
+
+        <article class="project" data-tags="bi">
+          <h3 class="project-title">Retention & New Business Dashboards</h3>
+          <p class="project-text">Two Power BI dashboards I own end to end. The first started as an Excel port
+            and was rebuilt from scratch to track retention across every product. The second covers new
+            business, with premium and loss ratios for individual and SME lines. Both slice by country,
+            region of cover and plan level, go out monthly to around 15 people, and are being extended to
+            global pricing teams.</p>
+          <p class="project-metric">Leadership answers client questions in under 5 minutes instead of an hour</p>
+        </article>
+
+        <article class="project project-wide" data-tags="genai product">
+          <h3 class="project-title">AI Adoption & Engineering Practices</h3>
+          <p class="project-text">As the team's AI ambassador in the group's global AI adoption programme, I took
+            the programme to actuaries and underwriters and run knowledge-transfer sessions for non-technical
+            colleagues. Built agents on GPT and Claude for the team: one turns an Excel file into a
+            first-pass EDA, and an email summariser is now used by almost the whole team. Others handle code
+            review, documentation and PDFs. I also introduced Git to a team that kept code and models on
+            shared drives.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ Group: Sports ============ -->
+    <section class="project-group" data-group id="sports">
+      <div class="group-heading">
+        <h2 class="font-serif font-semibold text-2xl text-ink">Sports Analytics</h2>
+        <p class="text-sm text-ink/50">Professional sports analytics company · 2022 — 2023</p>
+      </div>
+      <div class="project-grid">
+
+        <article class="project" data-tags="ml">
+          <span class="badge">Case study</span>
+          <h3 class="project-title">Injury Risk Analytics for Sports Clients</h3>
+          <p class="project-text">Client projects run end to end: data health check, descriptive analysis
+            and feature selection, then XGBoost or SVM with SHAP to explain what drives injury risk — through
+            to project documentation and presenting findings to clients.</p>
+          <a href="index.html#case-sports" class="project-link">Read the case study →</a>
+        </article>
+
+        <article class="project" data-tags="automation">
+          <h3 class="project-title">Data Health Check Pipeline Rewrite</h3>
+          <p class="project-text">Proposed replacing an ageing data-quality pipeline, designed the new version
+            with the data engineering manager, and built it alone. It shipped with the features that would
+            otherwise have needed days of further development.</p>
+          <p class="project-metric">Runtime ~5 minutes → 2 minutes</p>
+        </article>
+
+        <article class="project" data-tags="ml">
+          <h3 class="project-title">Bespoke Client Analyses</h3>
+          <p class="project-text">One-off analyses beyond the standard offerings, including penalty analysis
+            and manager analysis, which widened the range of projects the team could take on.</p>
+        </article>
+
+        <article class="project" data-tags="automation">
+          <h3 class="project-title">Client Data Warehouse & AWS Migration</h3>
+          <p class="project-text">Supported a warehouse that combined multiple data sources into
+            analysis-ready, client-specific datasets, so other teams could start at EDA, not data
+            cleaning. Helped build its AWS-based successor (S3, DynamoDB, Lambda), writing large queries
+            and implementing and testing it, before moving full-time to client analytics.</p>
+        </article>
+
+        <article class="project project-wide" data-tags="product">
+          <h3 class="project-title">Injury Rehabilitation Research Proposal</h3>
+          <p class="project-text">Proposed a new research line on injury rehabilitation, which the research
+            team accepted. Designed and documented the process and kicked it off before leaving.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ Group: AI Research ============ -->
+    <section class="project-group" data-group id="research">
+      <div class="group-heading">
+        <h2 class="font-serif font-semibold text-2xl text-ink">AI Research</h2>
+        <p class="text-sm text-ink/50">University research centre & academic · 2017 · 2019 — 2022</p>
+      </div>
+      <div class="project-grid">
+
+        <article class="project" data-tags="cv ml">
+          <span class="badge">Case study</span>
+          <h3 class="project-title">Real-Time Computer Vision Use Cases</h3>
+          <p class="project-text">Designed and ran use cases on a real-time event processing engine for vision
+            across agriculture, smart cities, construction and tennis. One example is segmenting honeycomb
+            images to estimate a season's honey yield. I built the image and video datasets, then trained or
+            fine-tuned the models and deployed them on the engine for live processing.</p>
+          <p class="project-metric">12–15 models trained or transfer-learned</p>
+          <a href="index.html#case-research" class="project-link">Read the case study →</a>
+        </article>
+
+        <article class="project" data-tags="cv">
+          <h3 class="project-title">Peer-Reviewed Publications</h3>
+          <p class="project-text">Co-authored and defended papers presenting the engine's capabilities.</p>
+          <ul class="mt-3 space-y-1 text-sm">
+            <li><a href="https://researchrepository.universityofgalway.ie/entities/publication/f57cfd12-7857-4d38-9478-4d9a68458c1f" target="_blank" rel="noopener" class="text-accent hover:underline">ACM VLDB Endowment (2021) ↗</a></li>
+            <li><a href="https://ieeexplore.ieee.org/abstract/document/9681901" target="_blank" rel="noopener" class="text-accent hover:underline">IEEE Internet of Things Journal (2022) ↗</a></li>
+          </ul>
+        </article>
+
+        <article class="project project-wide" data-tags="ml">
+          <h3 class="project-title">Academic Research</h3>
+          <p class="project-text">MSc dissertation on penalty kick analysis (University College Cork, First
+            Class Honours). B.Tech dissertation (Shiv Nadar University, 2017) published by Springer.</p>
+          <ul class="mt-3 space-y-1 text-sm">
+            <li><a href="https://link.springer.com/chapter/10.1007/978-981-10-8240-5_41" target="_blank" rel="noopener" class="text-accent hover:underline">Springer (2018) ↗</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ Group: Pharma ============ -->
+    <section class="project-group" data-group id="pharma">
+      <div class="group-heading">
+        <h2 class="font-serif font-semibold text-2xl text-ink">Pharma Analytics</h2>
+        <p class="text-sm text-ink/50">Pharma sales consultancy · 2018 — 2019</p>
+      </div>
+      <div class="project-grid">
+
+        <article class="project" data-tags="automation bi">
+          <h3 class="project-title">Client Reporting Automation</h3>
+          <p class="project-text">As the only analyst, produced weekly, fortnightly and monthly sales
+            performance reports for global pharmaceutical clients. Wrote a Python script that took the updated
+            data in and put client-ready reports out, freeing up a large part of every reporting cycle.</p>
+        </article>
+
+        <article class="project" data-tags="bi">
+          <h3 class="project-title">Client Performance Benchmarking Dashboard</h3>
+          <p class="project-text">An interactive Tableau dashboard benchmarking clients' performance since
+            onboarding, used to retain existing clients and win new ones. Trained and mentored two interns to
+            run both the dashboard and the reporting automation.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ Group: Products built on the side ============ -->
+    <section class="project-group" data-group id="ventures">
+      <div class="group-heading">
+        <h2 class="font-serif font-semibold text-2xl text-ink">Products I'm Building</h2>
+        <p class="text-sm text-ink/50">WarrantyIT · ChefSmart · Co-founder of both</p>
+      </div>
+      <div class="project-grid">
+
+        <article class="project" data-tags="genai cv">
+          <span class="badge">Case study</span>
+          <h3 class="project-title">WarrantyIT — VLM Document Extraction</h3>
+          <p class="project-text">Explored RAG (LangChain, Pinecone) first, then pivoted to a vision language
+            model (Moondream, with LLaVA planned) for higher accuracy on PDF, printed and handwritten bills.
+            Implemented end to end, outputting structured JSON straight into the claim form.</p>
+          <a href="index.html#case-warrantyit" class="project-link">Read the case study →</a>
+        </article>
+
+        <article class="project" data-tags="product">
+          <h3 class="project-title">WarrantyIT — Building the Product</h3>
+          <p class="project-text">A B2C and B2B platform that helps people manage their warranties and claims,
+            and helps businesses handle the claims that come in. It's still in development. As co-founder I
+            own development, project design, business workflows, people management and mentoring. I also
+            designed the full B2B screen specification: vendor and brand roles, claim routing logic and 17
+            screens, detailed enough to hand straight to AI design tools.</p>
+        </article>
+
+        <article class="project project-wide" data-tags="product">
+          <h3 class="project-title">ChefSmart — A Two-Sided Marketplace from Zero</h3>
+          <p class="project-text"><strong>Problem:</strong> as co-founder of ChefSmart, a marketplace
+            connecting consumers with independent chefs in Dublin, the job was to take the idea from a blank
+            page to a fully specified, implementation-ready technical plan.</p>
+          <p class="project-text mt-2"><strong>Approach:</strong> I wrote the full product requirements
+            document, then designed the architecture. It's a Turborepo monorepo with a Next.js 14 web app
+            and an Expo React Native mobile app, plus a Hono backend. Supabase is the database, Stripe
+            Connect Express handles two-sided payments, Trigger.dev runs background jobs and Upstash Redis
+            caches, all deployed on Render. Designed a 14-table Drizzle ORM schema with row-level security
+            policies enforcing data access at the database layer, and wrote the complete API contract before
+            implementation began.</p>
+          <p class="project-text mt-2"><strong>Outcome:</strong> shows range beyond data science: full-stack
+            product and system architecture, taken from a business idea to an implementation-ready plan.</p>
+        </article>
+      </div>
+    </section>
+
+    <p id="no-results" class="hidden max-w-5xl mx-auto px-6 py-10 text-ink/60">No projects match that filter.</p>
+
+    <!-- ============================= CTA ============================= -->
+    <section class="max-w-5xl mx-auto px-6 py-20 border-t border-line">
+      <h2 class="section-title">Seen something close to your problem?</h2>
+      <p class="mt-3 text-ink/60 max-w-xl">Tell me about it. A few lines on the problem, the data you have and
+        your timeline is plenty to start with.</p>
+      <div class="mt-8">
+        <a href="index.html#contact" class="btn-primary">Let's talk about your problem</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line py-8">
+    <div class="max-w-5xl mx-auto px-6 flex flex-wrap justify-between gap-4 text-xs text-ink/40">
+      <p>© <span id="year"></span> Praneet Dhingra</p>
+      <a href="index.html" class="hover:text-accent">← Home</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
